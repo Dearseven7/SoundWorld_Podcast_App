@@ -33,58 +33,73 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="30dp"
-            android:textSize="35sp" />
+            android:layout_margin="25dp"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
         <RadioGroup
             android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp">
+
             <RadioButton
                 android:id="@+id/answer1"
-                android:text="可回收物"
-                android:textSize="30sp"
-                android:layout_margin="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <RadioButton
-                android:id="@+id/answer2"
-                android:text="有害垃圾"
-                android:textSize="30sp"
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checked="false"/>
+                android:layout_margin="10dp"
+                android:text="可回收物"
+                android:textColor="#009688"
+                android:textSize="26sp" />
+
+            <RadioButton
+                android:id="@+id/answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:checked="false"
+                android:text="有害垃圾"
+                android:textColor="#009688"
+                android:textSize="26sp" />
+
             <RadioButton
                 android:id="@+id/answer3"
-                android:text="湿垃圾  "
-                android:textSize="30sp"
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="湿垃圾  "
+                android:textColor="#009688"
+                android:textSize="26sp" />
+
             <RadioButton
                 android:id="@+id/answer4"
-                android:text="干垃圾  "
-                android:textSize="30sp"
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="干垃圾  "
+                android:textColor="#009688"
+                android:textSize="26sp" />
         </RadioGroup>
+
         <Button
             android:id="@+id/submit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="30dp"
+            android:background="@drawable/bottom_begin"
+            android:padding="5dp"
             android:text="开始答题"
-            android:textSize="30sp"
-            android:layout_margin="20dp"
-            android:background="@drawable/button_circle"
-            android:padding="20dp"
-            android:layout_gravity="center_horizontal" />
+            android:textColor="#029C8D"
+            android:textSize="16sp"
+            android:textStyle="bold" />
     </LinearLayout>
+
 </LinearLayout>

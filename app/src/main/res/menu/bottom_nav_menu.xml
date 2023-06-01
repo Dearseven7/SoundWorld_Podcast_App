@@ -5,10 +5,10 @@
         android:title="首页" />
     <item
         android:id="@+id/navigation_guide"
-        android:icon="@drawable/menu"
-        android:title="指南" />
+        android:icon="@drawable/score_icon"
+        android:title="积分" />
     <item
         android:id="@+id/navigation_setting"
-        android:icon="@drawable/setting"
-        android:title="设置" />
+        android:icon="@drawable/me"
+        android:title="我的" />
 </menu>
