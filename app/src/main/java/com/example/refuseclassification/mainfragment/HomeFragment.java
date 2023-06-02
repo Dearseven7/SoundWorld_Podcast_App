@@ -64,38 +64,38 @@ public class HomeFragment extends Fragment implements EventListener{
         new setTitleCenter().setTitleCenter(toolbar);// 初始化ToolBar
         new KnowledgeDatabase().setKnowledgeDatabase();// 初始化数据库
         // 绑定按钮以及事件
-        recyclable_button = (ImageButton) view.findViewById(R.id.recyclable_button);
-        recyclable_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), RecyclableActivity.class);
-                startActivity(intent);
-            }
-        });
-        harmful_button = (ImageButton) view.findViewById(R.id.harmful_button);
-        harmful_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), HarmfulActivity.class);
-                startActivity(intent);
-            }
-        });
-        wet_button = (ImageButton) view.findViewById(R.id.wet_button);
-        wet_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), WetActivity.class);
-                startActivity(intent);
-            }
-        });
-        dry_button = (ImageButton) view.findViewById(R.id.dry_button);
-        dry_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), DryActivity.class);
-                startActivity(intent);
-            }
-        });
+//        recyclable_button = (ImageButton) view.findViewById(R.id.recyclable_button);
+//        recyclable_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getActivity(), RecyclableActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        harmful_button = (ImageButton) view.findViewById(R.id.harmful_button);
+//        harmful_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getActivity(), HarmfulActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        wet_button = (ImageButton) view.findViewById(R.id.wet_button);
+//        wet_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getActivity(), WetActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        dry_button = (ImageButton) view.findViewById(R.id.dry_button);
+//        dry_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getActivity(), DryActivity.class);
+//                startActivity(intent);
+//            }
+//        });
         test_button = (ImageButton) view.findViewById(R.id.test_button);
         test_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,22 +104,22 @@ public class HomeFragment extends Fragment implements EventListener{
                 startActivity(intent);
             }
         });
-        exercise_button = (ImageButton) view.findViewById(R.id.exercise_button);
-        exercise_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ExerciseActivity.class);
-                startActivity(intent);
-            }
-        });
-        errorProne_button = (ImageButton) view.findViewById(R.id.errorProne_button);
-        errorProne_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ErrorProneActivity.class);
-                startActivity(intent);
-            }
-        });
+//        exercise_button = (ImageButton) view.findViewById(R.id.exercise_button);
+//        exercise_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getActivity(), ExerciseActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        errorProne_button = (ImageButton) view.findViewById(R.id.errorProne_button);
+//        errorProne_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getActivity(), ErrorProneActivity.class);
+//                startActivity(intent);
+//            }
+//        });
         common_button = (ImageButton) view.findViewById(R.id.common_button);
         common_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,14 +128,14 @@ public class HomeFragment extends Fragment implements EventListener{
                 startActivity(intent);
             }
         });
-        special_button = (ImageButton) view.findViewById(R.id.special_button);
-        special_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), SpecialActivity.class);
-                startActivity(intent);
-            }
-        });
+//        special_button = (ImageButton) view.findViewById(R.id.special_button);
+//        special_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getActivity(), SpecialActivity.class);
+//                startActivity(intent);
+//            }
+//        });
         search = (EditText) view.findViewById(R.id.searchHome);
         search.setFocusable(false);//失去焦点
         search.setOnClickListener(new View.OnClickListener() {
