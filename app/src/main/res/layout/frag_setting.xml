@@ -89,7 +89,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/text_question_record"
+            android:id="@+id/text_order"
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_marginStart="8dp"
@@ -97,7 +97,7 @@
             android:background="@drawable/middle_me"
             android:paddingTop="15dp"
             android:paddingBottom="15dp"
-            android:text="答题记录"
+            android:text="我的订单"
             android:textAlignment="center"
             android:textColor="#39AF7A"
             android:textSize="20sp"

@@ -42,6 +42,8 @@
 
         <activity android:name=".PersonalHomeActivity" />
 
+        <activity android:name=".OrdersActivity" />
+
         <activity android:name=".CommonActivity" />
         <activity android:name=".ExerciseActivity" />
         <activity android:name=".AnswerActivity" />

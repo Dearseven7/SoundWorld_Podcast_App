@@ -5,11 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.OrientationHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
@@ -17,10 +15,6 @@ import com.example.refuseclassification.Database.Item;
 import com.example.refuseclassification.PagerAdapter;
 import com.example.refuseclassification.R;
 import com.example.refuseclassification.adapter.RecyclerAdapter;
-import com.example.refuseclassification.guidefragment.DryFragment;
-import com.example.refuseclassification.guidefragment.HarmfulFragment;
-import com.example.refuseclassification.guidefragment.RecyclableFragment;
-import com.example.refuseclassification.guidefragment.WetFragment;
 import com.example.refuseclassification.setTitleCenter;
 import com.google.android.material.tabs.TabLayout;
 
@@ -43,7 +37,7 @@ public class GuideFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.frag_credit, container, false);
-        toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+        toolbar = (Toolbar) view.findViewById(R.id.ordertoolbar);
         toolbar.setTitle("积分兑换");
         new setTitleCenter().setTitleCenter(toolbar);
         mRecyclerview=(RecyclerView)view.findViewById(R.id.recyclercommodity);

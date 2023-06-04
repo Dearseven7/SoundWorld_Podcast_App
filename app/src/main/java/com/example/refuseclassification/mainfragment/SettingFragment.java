@@ -1,5 +1,6 @@
 package com.example.refuseclassification.mainfragment;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -31,6 +32,7 @@ import androidx.fragment.app.Fragment;
 import com.example.refuseclassification.AboutActivity;
 import com.example.refuseclassification.AgreementActivity;
 import com.example.refuseclassification.NotificationActivity;
+import com.example.refuseclassification.OrdersActivity;
 import com.example.refuseclassification.PersonalHomeActivity;
 import com.example.refuseclassification.R;
 import com.example.refuseclassification.setTitleCenter;
@@ -48,6 +50,9 @@ public class SettingFragment extends Fragment {
 
     private TextView personalhome;
 
+    private TextView orders;
+
+
     private TextView contact;
     private TextView about;
     private TextView agreement;
@@ -56,6 +61,7 @@ public class SettingFragment extends Fragment {
     private Bitmap head;// 头像Bitmap
     private static String path = "/sdcard/myHead/";// sd路径
 
+    @SuppressLint("MissingInflatedId")
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -149,6 +155,16 @@ public class SettingFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        orders=view.findViewById(R.id.text_order);
+        orders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), OrdersActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 //个人主页跳转
         personalhome = view.findViewById(R.id.text_person_homepage);
         personalhome.setOnClickListener(new View.OnClickListener() {
@@ -158,6 +174,9 @@ public class SettingFragment extends Fragment {
                 startActivity(intent);
             }
         });
+//        我的订单页面跳转
+
+
 
         version = view.findViewById(R.id.text_version);
         version.setOnClickListener(new View.OnClickListener() {
