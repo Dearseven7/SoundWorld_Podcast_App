@@ -39,6 +39,9 @@
         <activity android:name=".SearchActivity" />
         <activity android:name=".SpecialActivity" />
         <activity android:name=".ErrorProneActivity" />
+
+        <activity android:name=".PersonalHomeActivity" />
+
         <activity android:name=".CommonActivity" />
         <activity android:name=".ExerciseActivity" />
         <activity android:name=".AnswerActivity" />

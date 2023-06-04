@@ -31,6 +31,7 @@ import androidx.fragment.app.Fragment;
 import com.example.refuseclassification.AboutActivity;
 import com.example.refuseclassification.AgreementActivity;
 import com.example.refuseclassification.NotificationActivity;
+import com.example.refuseclassification.PersonalHomeActivity;
 import com.example.refuseclassification.R;
 import com.example.refuseclassification.setTitleCenter;
 
@@ -44,6 +45,9 @@ public class SettingFragment extends Fragment {
     private Toolbar toolbar;
     private ImageButton imageButton;
     private TextView notification;
+
+    private TextView personalhome;
+
     private TextView contact;
     private TextView about;
     private TextView agreement;
@@ -56,7 +60,7 @@ public class SettingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.frag_setting, container, false);
-        toolbar = (Toolbar) view.findViewById(R.id.setting_toolbar);
+        toolbar = (Toolbar) view.findViewById(R.id.persontool);
         toolbar.setTitle("设置");
         new setTitleCenter().setTitleCenter(toolbar);
 
@@ -142,6 +146,15 @@ public class SettingFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), AgreementActivity.class);
+                startActivity(intent);
+            }
+        });
+//个人主页跳转
+        personalhome = view.findViewById(R.id.text_person_homepage);
+        personalhome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), PersonalHomeActivity.class);
                 startActivity(intent);
             }
         });
