@@ -26,6 +26,7 @@ import com.example.refuseclassification.CommonActivity;
 import com.example.refuseclassification.DryActivity;
 import com.example.refuseclassification.ErrorProneActivity;
 import com.example.refuseclassification.ExerciseActivity;
+import com.example.refuseclassification.GarbageInfoActivity;
 import com.example.refuseclassification.HarmfulActivity;
 import com.example.refuseclassification.KnowledgeDatabase;
 import com.example.refuseclassification.R;
@@ -46,7 +47,7 @@ public class HomeFragment extends Fragment implements EventListener{
     private ImageButton harmful_button;
     private ImageButton wet_button;
     private ImageButton dry_button;
-    private ImageButton test_button;
+    private ImageButton information_button;
     private ImageButton exercise_button;
     private ImageButton errorProne_button;
     private ImageButton common_button;
@@ -96,11 +97,11 @@ public class HomeFragment extends Fragment implements EventListener{
 //                startActivity(intent);
 //            }
 //        });
-        test_button = (ImageButton) view.findViewById(R.id.test_button);
-        test_button.setOnClickListener(new View.OnClickListener() {
+        information_button = (ImageButton) view.findViewById(R.id.information_button);
+        information_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), TestActivity.class);
+                Intent intent = new Intent(getActivity(), GarbageInfoActivity.class);
                 startActivity(intent);
             }
         });
@@ -148,21 +149,21 @@ public class HomeFragment extends Fragment implements EventListener{
 
         // 初始化权限
         initPermission();
-        recording_button = (ImageButton) view.findViewById(R.id.recording_button);
-        recording_button.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                int action = event.getAction();
-                if (action == MotionEvent.ACTION_DOWN) {
-                    // 按下 处理相关逻辑
-                    asr.send(SpeechConstant.ASR_START, "{}", null, 0, 0);
-                } else if (action == MotionEvent.ACTION_UP) {
-                    // 松开 处理相关逻辑
-                    asr.send(SpeechConstant.ASR_STOP, "{}", null, 0, 0);
-                }
-                return false;
-            }
-        });
+//        recording_button = (ImageButton) view.findViewById(R.id.recording_button);
+//        recording_button.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                int action = event.getAction();
+//                if (action == MotionEvent.ACTION_DOWN) {
+//                    // 按下 处理相关逻辑
+//                    asr.send(SpeechConstant.ASR_START, "{}", null, 0, 0);
+//                } else if (action == MotionEvent.ACTION_UP) {
+//                    // 松开 处理相关逻辑
+//                    asr.send(SpeechConstant.ASR_STOP, "{}", null, 0, 0);
+//                }
+//                return false;
+//            }
+//        });
 
         //初始化EventManager对象
         asr = EventManagerFactory.create(getContext(), "asr");

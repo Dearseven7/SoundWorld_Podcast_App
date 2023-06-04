@@ -1,81 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bk_refuse"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/recyclable_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#64E269" />
+        android:background="#D6ECD6" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="15dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            android:layout_margin="15dp"
-            android:src="@drawable/recyclable"/>
+            android:src="@drawable/recyclable" />
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:layout_weight="5"
-            android:orientation="vertical"
-            android:layout_margin="5dp">
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#D8000000"
-                android:text="可回收垃圾"
-                android:textSize="15sp"/>
+                android:text="我是什么？"
+                android:textColor="#15851A"
+                android:textSize="20sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#45000000"
-                android:text="可回收物指适宜回收利用和资源化利用的生活废弃物。主要包括：废纸、废弃塑料瓶、废金属、废包装物、废旧纺织物、废弃电器电子产品、废玻璃、废纸塑铝复合包装等。" />
+                android:text="我是可以通过再利用或回收过程转化为新的原材料或产品的废弃物。"
+                android:textColor="#15851A"
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
         android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_margin="5dp">
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#D8000000"
-            android:text="投放要求"
-            android:textSize="15sp"/>
+            android:text="你要怎么处理我"
+            android:textColor="#15851A"
+            android:textSize="20sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#45000000"
-            android:text="鼓励居民直接将可回收物纳入再生资源回收系统，如需分类投放应尽量保持清洁干燥，避免污染，轻投轻放。其中：1、废纸应保持平整，立体包装物应清空内容物，清洁后压扁投放。2、废玻璃有尖锐边角的，应包裹后投放。" />
+            android:text="通常在回收站或指定的回收点收集，并通过分类和处理流程进行回收和再利用。"
+            android:textColor="#15851A"
+            android:textSize="16sp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#D8000000"
-            android:text="常见可回收垃圾"
-            android:textSize="15sp"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:text="我存在于"
+            android:textColor="#15851A"
+            android:textSize="20sp" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclable_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp" />
     </LinearLayout>
 </LinearLayout>

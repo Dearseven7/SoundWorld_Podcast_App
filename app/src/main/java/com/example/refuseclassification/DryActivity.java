@@ -30,7 +30,7 @@ public class DryActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dry);
         toolbar = (Toolbar) findViewById(R.id.dry_toolbar);
-        toolbar.setTitle("干垃圾");
+        toolbar.setTitle("其他垃圾");
         new setTitleCenter().setTitleCenter(toolbar);
         // 编写列表内容
         recyclerView = findViewById(R.id.dry_recyclerView);
