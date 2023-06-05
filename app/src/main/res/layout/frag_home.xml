@@ -15,7 +15,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="388dp"
+        android:layout_height="422dp"
         android:layout_weight="0.8"
         android:orientation="vertical">
 
@@ -28,7 +28,7 @@
         <EditText
             android:id="@+id/searchHome"
             android:layout_width="wrap_content"
-            android:layout_height="79dp"
+            android:layout_height="68dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="-40dp"
             android:layout_marginRight="20dp"
@@ -44,7 +44,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="209dp"
+        android:layout_height="236dp"
         android:layout_weight="1"
         android:orientation="horizontal"
         android:paddingLeft="10dp"

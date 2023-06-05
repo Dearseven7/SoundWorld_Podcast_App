@@ -42,7 +42,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="我是含有大量有机物质的垃圾，主要是食物残渣、厨余垃圾和植物残余物。"
+                android:text="我是生活中产生的食物残渣、菜叶、果皮、剩饭剩菜、蔬菜水果废料等有机废弃物。包含大量的水分和有机物质，容易产生恶臭、滋生细菌和引发害虫。"
                 android:textColor="#15851A"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -65,7 +65,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="湿垃圾可以通过堆肥或其他生物降解的方法进行处理。在某些地区，政府提供生物垃圾收集服务，将湿垃圾集中处理并用于制作肥料或生物能源。"
+            android:text="请将我放入专用的垃圾桶或袋子中，由相关部门进行回收和处理。这些回收的厨余垃圾通常会进行堆肥或发酵处理，生产有机肥料或生物能源。"
             android:textColor="#15851A"
             android:textSize="16sp" />
     </LinearLayout>

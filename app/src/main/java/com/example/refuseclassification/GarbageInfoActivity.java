@@ -54,7 +54,7 @@ public class GarbageInfoActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.garbage_information);
         toolbar = (Toolbar) findViewById(R.id.search_toolbar);
-        toolbar.setTitle("garbage");
+        toolbar.setTitle("四大垃圾分类");
 
         new setTitleCenter().setTitleCenter(toolbar);// 初始化ToolBar
 

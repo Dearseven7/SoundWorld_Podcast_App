@@ -33,6 +33,7 @@ import com.example.refuseclassification.R;
 import com.example.refuseclassification.RecyclableActivity;
 import com.example.refuseclassification.SearchActivity;
 import com.example.refuseclassification.SpecialActivity;
+import com.example.refuseclassification.StartQuestionActivity;
 import com.example.refuseclassification.TestActivity;
 import com.example.refuseclassification.WetActivity;
 import com.example.refuseclassification.setTitleCenter;
@@ -125,7 +126,7 @@ public class HomeFragment extends Fragment implements EventListener{
         common_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), CommonActivity.class);
+                Intent intent = new Intent(getActivity(), StartQuestionActivity.class);
                 startActivity(intent);
             }
         });

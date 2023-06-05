@@ -47,7 +47,7 @@ public class CommonActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_common);
         toolbar = (Toolbar) findViewById(R.id.test_toolbar);
-        toolbar.setTitle("常见");
+        toolbar.setTitle("什么垃圾小游戏");
         count = -1;
         new setTitleCenter().setTitleCenter(toolbar);// 初始化ToolBar
         // 初始化随机数列表，10个1~100的数

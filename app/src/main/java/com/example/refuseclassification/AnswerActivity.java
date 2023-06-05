@@ -31,7 +31,7 @@ public class AnswerActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer);
         toolbar = (Toolbar) findViewById(R.id.test_toolbar);
-        toolbar.setTitle("考试结果");
+        toolbar.setTitle("游戏得分");
         new setTitleCenter().setTitleCenter(toolbar);// 初始化ToolBar
         score_view = findViewById(R.id.score);
         // 获取数据
