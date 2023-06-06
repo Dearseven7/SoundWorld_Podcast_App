@@ -37,8 +37,6 @@
             android:value="WakD4dM6hykhHreHjQ5uNayIXnP3BSSp" />
 
         <activity android:name=".SearchActivity" />
-        <activity android:name=".SpecialActivity" />
-        <activity android:name=".ErrorProneActivity" />
 
         <activity android:name=".PersonalHomeActivity" />
 
@@ -47,11 +45,9 @@
         <activity android:name=".StartQuestionActivity" />
 
         <activity android:name=".CommonActivity" />
-        <activity android:name=".ExerciseActivity" />
         <activity android:name=".AnswerActivity" />
-        <activity android:name=".TestActivity" />
-        <activity android:name=".DryActivity" />
-        <activity android:name=".WetActivity" />
+        <activity android:name=".OthersActivity" />
+        <activity android:name=".KitchenActivity" />
         <activity android:name=".HarmfulActivity" />
         <activity android:name=".RecyclableActivity" />
         <activity

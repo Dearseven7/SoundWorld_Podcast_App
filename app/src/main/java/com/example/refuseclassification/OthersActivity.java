@@ -1,7 +1,6 @@
 package com.example.refuseclassification;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,40 +17,41 @@ import org.litepal.LitePal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WetActivity extends BaseActivity {
+public class OthersActivity extends BaseActivity {
+
     private Toolbar toolbar;
     RecyclerView recyclerView;
     List<Knowledge> knowledges = new ArrayList<>();
-    WetActivity.MyAdapter myAdapter;
+    OthersActivity.MyAdapter myAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wet);
-        toolbar = (Toolbar) findViewById(R.id.wet_toolbar);
-        toolbar.setTitle("厨余垃圾");
+        setContentView(R.layout.activity_others);
+        toolbar = (Toolbar) findViewById(R.id.dry_toolbar);
+        toolbar.setTitle("其他垃圾");
         new setTitleCenter().setTitleCenter(toolbar);
         // 编写列表内容
-        recyclerView = findViewById(R.id.wet_recyclerView);
-        knowledges = LitePal.where("kind = ?", "厨余垃圾").find(Knowledge.class);
-        myAdapter = new WetActivity.MyAdapter();
+        recyclerView = findViewById(R.id.dry_recyclerView);
+        knowledges = LitePal.where("kind = ?", "干垃圾").find(Knowledge.class);
+        myAdapter = new OthersActivity.MyAdapter();
         recyclerView.setAdapter(myAdapter);
-        LinearLayoutManager manager = new LinearLayoutManager(WetActivity.this);
+        LinearLayoutManager manager = new LinearLayoutManager(OthersActivity.this);
         recyclerView.setLayoutManager(manager);
     }
 
-    class MyAdapter extends RecyclerView.Adapter<WetActivity.MyViewHolder> {
+    class MyAdapter extends RecyclerView.Adapter<OthersActivity.MyViewHolder> {
 
         @NonNull
         @Override
-        public WetActivity.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = View.inflate(WetActivity.this, R.layout.item_recyclerview, null);
-            WetActivity.MyViewHolder myViewHolder = new WetActivity.MyViewHolder(view);
+        public OthersActivity.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = View.inflate(OthersActivity.this, R.layout.item_recyclerview, null);
+            OthersActivity.MyViewHolder myViewHolder = new OthersActivity.MyViewHolder(view);
             return myViewHolder;
         }
 
         @Override
-        public void onBindViewHolder(@NonNull WetActivity.MyViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull OthersActivity.MyViewHolder holder, int position) {
             Knowledge knowledge = knowledges.get(position);
             holder.name.setText(knowledge.getName());
             //holder.kind.setText((knowledge.getKind()));

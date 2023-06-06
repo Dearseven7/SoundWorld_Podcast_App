@@ -20,7 +20,7 @@ public class KnowledgeDatabase {
                      "胶囊", "灯泡", "农药", "油漆", "维生素", "酒精", "指甲油", "铅蓄电池",
                      "废电池", "打火机", "医用纱布", "医用棉签", "相片", "干电池", "钙片", "针管", "针筒"};
 
-    String[] kind = {"湿垃圾", "干垃圾", "可回收物", "有害垃圾"};
+    String[] kind = {"厨余垃圾", "其他垃圾", "可回收物", "有害垃圾"};
 
     public void setKnowledgeDatabase() {
         LitePal.getDatabase();

@@ -25,14 +25,10 @@ public class GuideFragment extends Fragment {
     private List<Item> mData=new ArrayList<>();
     private RecyclerView mRecyclerview;
     private RecyclerAdapter mAdapter;
-    private GridLayoutManager layoutManager;
 
 
 
-    private TabLayout tabLayout;
-    private List<Fragment> fragmentList;
-    private ViewPager viewPager;
-    private PagerAdapter adapter;
+
     private Toolbar toolbar;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

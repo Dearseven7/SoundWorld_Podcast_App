@@ -4,9 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -22,20 +20,11 @@ import com.baidu.speech.EventManagerFactory;
 import com.baidu.speech.EventManager;
 import com.baidu.speech.asr.SpeechConstant;
 import com.example.refuseclassification.ASRresponse;
-import com.example.refuseclassification.CommonActivity;
-import com.example.refuseclassification.DryActivity;
-import com.example.refuseclassification.ErrorProneActivity;
-import com.example.refuseclassification.ExerciseActivity;
 import com.example.refuseclassification.GarbageInfoActivity;
-import com.example.refuseclassification.HarmfulActivity;
 import com.example.refuseclassification.KnowledgeDatabase;
 import com.example.refuseclassification.R;
-import com.example.refuseclassification.RecyclableActivity;
 import com.example.refuseclassification.SearchActivity;
-import com.example.refuseclassification.SpecialActivity;
 import com.example.refuseclassification.StartQuestionActivity;
-import com.example.refuseclassification.TestActivity;
-import com.example.refuseclassification.WetActivity;
 import com.example.refuseclassification.setTitleCenter;
 import com.google.gson.Gson;
 
@@ -44,17 +33,12 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment implements EventListener{
 
     private Toolbar toolbar;
-    private ImageButton recyclable_button;
-    private ImageButton harmful_button;
-    private ImageButton wet_button;
-    private ImageButton dry_button;
+
     private ImageButton information_button;
-    private ImageButton exercise_button;
-    private ImageButton errorProne_button;
+
     private ImageButton common_button;
-    private ImageButton special_button;
+
     private EditText search;
-    private ImageButton recording_button;
     private EventManager asr;//语音识别核心库
     private String result;
 
@@ -66,38 +50,7 @@ public class HomeFragment extends Fragment implements EventListener{
         new setTitleCenter().setTitleCenter(toolbar);// 初始化ToolBar
         new KnowledgeDatabase().setKnowledgeDatabase();// 初始化数据库
         // 绑定按钮以及事件
-//        recyclable_button = (ImageButton) view.findViewById(R.id.recyclable_button);
-//        recyclable_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getActivity(), RecyclableActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//        harmful_button = (ImageButton) view.findViewById(R.id.harmful_button);
-//        harmful_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getActivity(), HarmfulActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//        wet_button = (ImageButton) view.findViewById(R.id.wet_button);
-//        wet_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getActivity(), WetActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//        dry_button = (ImageButton) view.findViewById(R.id.dry_button);
-//        dry_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getActivity(), DryActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+
         information_button = (ImageButton) view.findViewById(R.id.information_button);
         information_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,22 +59,7 @@ public class HomeFragment extends Fragment implements EventListener{
                 startActivity(intent);
             }
         });
-//        exercise_button = (ImageButton) view.findViewById(R.id.exercise_button);
-//        exercise_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getActivity(), ExerciseActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//        errorProne_button = (ImageButton) view.findViewById(R.id.errorProne_button);
-//        errorProne_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getActivity(), ErrorProneActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+
         common_button = (ImageButton) view.findViewById(R.id.common_button);
         common_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -130,14 +68,7 @@ public class HomeFragment extends Fragment implements EventListener{
                 startActivity(intent);
             }
         });
-//        special_button = (ImageButton) view.findViewById(R.id.special_button);
-//        special_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getActivity(), SpecialActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+
         search = (EditText) view.findViewById(R.id.searchHome);
         search.setFocusable(false);//失去焦点
         search.setOnClickListener(new View.OnClickListener() {
@@ -150,21 +81,7 @@ public class HomeFragment extends Fragment implements EventListener{
 
         // 初始化权限
         initPermission();
-//        recording_button = (ImageButton) view.findViewById(R.id.recording_button);
-//        recording_button.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                int action = event.getAction();
-//                if (action == MotionEvent.ACTION_DOWN) {
-//                    // 按下 处理相关逻辑
-//                    asr.send(SpeechConstant.ASR_START, "{}", null, 0, 0);
-//                } else if (action == MotionEvent.ACTION_UP) {
-//                    // 松开 处理相关逻辑
-//                    asr.send(SpeechConstant.ASR_STOP, "{}", null, 0, 0);
-//                }
-//                return false;
-//            }
-//        });
+
 
         //初始化EventManager对象
         asr = EventManagerFactory.create(getContext(), "asr");
