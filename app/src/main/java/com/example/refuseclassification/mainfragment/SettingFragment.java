@@ -133,7 +133,7 @@ public class SettingFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:15767064234"));
+                intent.setData(Uri.parse("tel:12315"));
                 startActivity(intent);
             }
         });

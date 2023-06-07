@@ -46,10 +46,11 @@ public class CommonActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_common);
-        toolbar = (Toolbar) findViewById(R.id.test_toolbar);
+        toolbar = findViewById(R.id.test_toolbar);
         toolbar.setTitle("什么垃圾小游戏");
-        count = -1;
-        new setTitleCenter().setTitleCenter(toolbar);// 初始化ToolBar
+        count = 0;
+        new setTitleCenter().setTitleCenter(toolbar); // 初始化ToolBar
+
         // 初始化随机数列表，10个1~100的数
         Set<Integer> hashSet = new HashSet<Integer>();
         while (hashSet.size() != 10) {
@@ -63,6 +64,7 @@ public class CommonActivity extends BaseActivity {
             Knowledge knowledge = LitePal.find(Knowledge.class, id);
             knowledges.add(knowledge);
         }
+
         // 设置题目
         question = findViewById(R.id.question);
         question_num = findViewById(R.id.question_num);
@@ -72,6 +74,10 @@ public class CommonActivity extends BaseActivity {
         answer3 = findViewById(R.id.answer3);
         answer4 = findViewById(R.id.answer4);
         submit = findViewById(R.id.submit);
+
+        submit.setText("提交答案");
+        question_num.setText("1");
+        question.setText(knowledges.get(0).getName());
 
         radiogroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -90,13 +96,13 @@ public class CommonActivity extends BaseActivity {
                     answer2.setTextColor(Color.parseColor("#000000"));
                 }
                 if(answer3.isChecked()) {
-                    answer = "湿垃圾";
+                    answer = "厨余垃圾/湿垃圾";
                     answer3.setTextColor(Color.parseColor("#FF0033"));
                 }else{
                     answer3.setTextColor(Color.parseColor("#000000"));
                 }
                 if(answer4.isChecked()) {
-                    answer = "干垃圾";
+                    answer = "其他垃圾/干垃圾";
                     answer4.setTextColor(Color.parseColor("#FF0033"));
                 }else{
                     answer4.setTextColor(Color.parseColor("#000000"));
@@ -108,41 +114,40 @@ public class CommonActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 radiogroup.clearCheck();
-                if (count == -1) {
-                    count++;
-                    question_num.setText(Integer.toString(count + 1));
-                    question.setText(knowledges.get(count).getName());
-                    submit.setText("提交答案");
+
+                if (!answer.equals("")) {
+                    if (answer.equals(knowledges.get(count).getKind())) {
+                        score += 10;
+                    }
+                    Knowledge knowledge = knowledges.get(count);
+                    knowledge.setAnswer(answer);
+                    knowledges.set(count, knowledge);
                 }
-                else if (count < 10) {
-                    if (!answer.equals("")) {
-                        if (answer.equals(knowledges.get(count).getKind())) {
-                            score += 10;
-                        }
-                        Knowledge knowledge = knowledges.get(count);
-                        knowledge.setAnswer(answer);
-                        knowledges.set(count, knowledge);
-                    }
-                    count = count + 1;
-                    if (count != 10)
-                    {
-                        question_num.setText(Integer.toString(count + 1));
+
+                count++;
+
+                if (count <= 10) {
+                    if (count != 10) {
+                        question_num.setText(String.valueOf(count + 1));
                         question.setText(knowledges.get(count).getName());
-                    }
-                    else {
+                    } else {
                         submit.setText("查看结果");
                     }
                 }
-                else {
+
+                if (count == 10) {
                     Intent intent = new Intent(CommonActivity.this, AnswerActivity.class);
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("knowledges", (Serializable) knowledges);
                     bundle.putInt("score", score);
                     intent.putExtra("message", bundle);
                     startActivity(intent);
-                    finish();// 销毁活动
+                    finish(); // 销毁活动
                 }
             }
         });
     }
+
+
+
 }
