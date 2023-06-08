@@ -33,7 +33,7 @@ public class OthersActivity extends BaseActivity {
         new setTitleCenter().setTitleCenter(toolbar);
         // 编写列表内容
         recyclerView = findViewById(R.id.dry_recyclerView);
-        knowledges = LitePal.where("kind = ?", "干垃圾").find(Knowledge.class);
+        knowledges = LitePal.where("kind = ?", "其他垃圾").find(Knowledge.class);
         myAdapter = new OthersActivity.MyAdapter();
         recyclerView.setAdapter(myAdapter);
         LinearLayoutManager manager = new LinearLayoutManager(OthersActivity.this);

@@ -32,7 +32,7 @@ public class KitchenActivity extends BaseActivity {
         new setTitleCenter().setTitleCenter(toolbar);
         // 编写列表内容
         recyclerView = findViewById(R.id.wet_recyclerView);
-        knowledges = LitePal.where("kind = ?", "湿垃圾").find(Knowledge.class);
+        knowledges = LitePal.where("kind = ?", "厨余垃圾").find(Knowledge.class);
         myAdapter = new KitchenActivity.MyAdapter();
         recyclerView.setAdapter(myAdapter);
         LinearLayoutManager manager = new LinearLayoutManager(KitchenActivity.this);

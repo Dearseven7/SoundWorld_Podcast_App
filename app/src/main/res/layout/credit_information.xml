@@ -1,0 +1,44 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/credit_info"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_scrollFlags="scroll|enterAlways">
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/tv_credit_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="一、用户答每对一题计1分；
+二、用户每累计答题100题，根据用户正确率奖励用户相应积分：
+正确率为60%（含）-70%（不含）：50分，
+正确率为70%（含）-80%（不含）：70分，
+正确率为80%（含）-90%（不含）：100分，
+正确率为90%（含）-100%（不含）：150分，
+正确率为100%：200分"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
