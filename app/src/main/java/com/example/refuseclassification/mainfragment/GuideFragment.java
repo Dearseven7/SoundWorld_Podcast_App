@@ -1,13 +1,16 @@
 package com.example.refuseclassification.mainfragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
@@ -25,8 +28,6 @@ public class GuideFragment extends Fragment {
     private List<Item> mData=new ArrayList<>();
     private RecyclerView mRecyclerview;
     private RecyclerAdapter mAdapter;
-
-
 
 
     private Toolbar toolbar;
@@ -47,10 +48,29 @@ public class GuideFragment extends Fragment {
         mRecyclerview.setAdapter(mAdapter);
 //        添加分割线
 //        mRecyclerview.addItemDecoration(new AdvanceDecoration(this, OrientationHelper.VERTICAL));
-        
+
+        //找到imageView3
+//        ImageView imageView3 = view.findViewById(R.id.imageView3);
+//        //为imageView3添加点击事件监听器
+//        imageView3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //创建Intent对象并指定跳转目标为CreditInformationActivity.class
+//                Intent intent = new Intent(getActivity(), CreditInformationActivity.class);
+//                //启动Intent
+//                startActivity(intent);
+//            }
+//        });
+//        RecyclerView recyclercommodity =view.findViewById(R.id.recyclercommodity);
+//        recyclercommodity.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getActivity(),DetailActivity.class);
+//                startActivity(intent);
+//            }
+//        });
         return view;
     }
-
 
     public void initedata(){
         Item item =new Item("红富士", R.drawable.hongfushi);

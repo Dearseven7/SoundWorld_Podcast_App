@@ -93,13 +93,13 @@ public class GameActivity extends BaseActivity {
                     answer2.setTextColor(Color.parseColor("#000000"));
                 }
                 if(answer3.isChecked()) {
-                    answer = "厨余垃圾/湿垃圾";
+                    answer = "湿垃圾";
                     answer3.setTextColor(Color.parseColor("#FF0033"));
                 }else{
                     answer3.setTextColor(Color.parseColor("#000000"));
                 }
                 if(answer4.isChecked()) {
-                    answer = "其他垃圾/干垃圾";
+                    answer = "干垃圾";
                     answer4.setTextColor(Color.parseColor("#FF0033"));
                 }else{
                     answer4.setTextColor(Color.parseColor("#000000"));

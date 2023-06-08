@@ -55,7 +55,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:required="true">
 
             <RadioButton
                 android:id="@+id/answer1"
@@ -81,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="湿垃圾  "
+                android:text="湿垃圾/厨余垃圾"
                 android:textColor="#009688"
                 android:textSize="26sp" />
 
@@ -90,7 +91,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="干垃圾  "
+                android:text="干垃圾/其他垃圾"
                 android:textColor="#009688"
                 android:textSize="26sp" />
         </RadioGroup>
