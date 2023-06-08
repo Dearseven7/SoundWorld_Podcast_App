@@ -1,4 +1,4 @@
-package com.example.refuseclassification.mainfragment;
+package com.example.refuseclassification;
 
 
 import android.os.Bundle;

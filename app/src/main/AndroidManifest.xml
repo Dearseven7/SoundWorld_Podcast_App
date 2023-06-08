@@ -50,6 +50,7 @@
         <activity android:name=".KitchenActivity" />
         <activity android:name=".HarmfulActivity" />
         <activity android:name=".RecyclableActivity" />
+        <activity android:name=".CreditInformationActivity"/>
         <activity
             android:name=".LoginActivity"
             android:label="登录" />

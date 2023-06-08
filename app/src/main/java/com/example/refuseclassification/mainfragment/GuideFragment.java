@@ -10,16 +10,13 @@ import android.widget.ImageView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
+import com.example.refuseclassification.CreditInformationActivity;
 import com.example.refuseclassification.Database.Item;
-import com.example.refuseclassification.PagerAdapter;
 import com.example.refuseclassification.R;
 import com.example.refuseclassification.adapter.RecyclerAdapter;
 import com.example.refuseclassification.setTitleCenter;
-import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +26,7 @@ public class GuideFragment extends Fragment {
     private RecyclerView mRecyclerview;
     private RecyclerAdapter mAdapter;
 
+    private ImageView imageV;
 
     private Toolbar toolbar;
     @Override
@@ -46,6 +44,15 @@ public class GuideFragment extends Fragment {
 //        将设置的布局添加到视图
         mRecyclerview.setLayoutManager(manager);
         mRecyclerview.setAdapter(mAdapter);
+
+        imageV = (ImageView) view.findViewById(R.id.imageView3);
+        imageV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), CreditInformationActivity.class);
+                startActivity(intent);
+            }
+        });
 //        添加分割线
 //        mRecyclerview.addItemDecoration(new AdvanceDecoration(this, OrientationHelper.VERTICAL));
 
