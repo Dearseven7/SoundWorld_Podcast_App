@@ -19,7 +19,6 @@ import com.baidu.speech.EventListener;
 import com.baidu.speech.EventManagerFactory;
 import com.baidu.speech.EventManager;
 import com.baidu.speech.asr.SpeechConstant;
-import com.example.refuseclassification.ASRresponse;
 import com.example.refuseclassification.GarbageInfoActivity;
 import com.example.refuseclassification.KnowledgeDatabase;
 import com.example.refuseclassification.R;
@@ -39,7 +38,7 @@ public class HomeFragment extends Fragment implements EventListener{
     private ImageButton common_button;
 
     private EditText search;
-    private EventManager asr;//语音识别核心库
+
     private String result;
 
     @Override
@@ -82,12 +81,6 @@ public class HomeFragment extends Fragment implements EventListener{
         // 初始化权限
         initPermission();
 
-
-        //初始化EventManager对象
-        asr = EventManagerFactory.create(getContext(), "asr");
-        //注册自己的输出事件类
-        asr.registerListener(this); // EventListener 中 onEvent方法
-
         return view;
     }
 
@@ -126,14 +119,7 @@ public class HomeFragment extends Fragment implements EventListener{
             if (params.contains("\"final_result\"")) {
                 // 一句话的最终识别结果
                 Gson gson = new Gson();
-                ASRresponse asRresponse = gson.fromJson(params, ASRresponse.class);//数据解析转实体bean
-                if(asRresponse.getBest_result().contains("，")){
-                    // 包含逗号  则将逗号替换为空格
-                    // 替换为空格之后，通过trim去掉字符串的首尾空格
-                    setResult(asRresponse.getBest_result().replace('，',' ').trim());
-                }else {// 不包含
-                    setResult(asRresponse.getBest_result().trim());
-                }
+
                 Intent intent = new Intent(getActivity(), SearchActivity.class);
                 if (result.contains("。")) {
                     setResult(result.replaceAll("。", ""));
@@ -147,11 +133,7 @@ public class HomeFragment extends Fragment implements EventListener{
     @Override
     public void onDestroy() {
         super.onDestroy();
-        //发送取消事件
-        asr.send(SpeechConstant.ASR_CANCEL, "{}", null, 0, 0);
-        //退出事件管理器
-        // 必须与registerListener成对出现，否则可能造成内存泄露
-        asr.unregisterListener(this);
+
     }
 
     public void setResult(String result) {

@@ -98,6 +98,7 @@ public class LoginActivity extends BaseActivity {
                 values.put("account", account);
                 values.put("password", password);
                 db.insert("Account", null, values);
+//                临时显示
                 Toast.makeText(LoginActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
             }
         });
