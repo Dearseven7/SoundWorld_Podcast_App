@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cover"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:minHeight="300dp"
+    >
+    <!--  等比例放大-->
+<!--    android:adjustViewBounds="false"-->
+    <!--设置图片不能超出范围-->
+    <!--    设置图片比例一致-->
+<!--    android:scaleType="centerCrop"-->
+</ImageView>

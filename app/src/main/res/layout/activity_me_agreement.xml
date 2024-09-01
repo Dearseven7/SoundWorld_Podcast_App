@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ThemeColor"
+    android:orientation="vertical"
+    tools:context="com.example.soundworld.meActivity.AgreementActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/BarColor"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/backme"
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/backicon" />
+
+        <TextView
+            android:id="@+id/title_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="隐私和协议"
+            android:textColor="@color/TextColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:text="
+    1.信息用途：我们收集的个人信息将用于提供、维护和改进SoundWorld播客App的相关服务，以及向您推送定制化的播客内容和服务。\n
+    2.第三方服务：为了提供更全面的服务，我们可能与第三方服务提供商合作。在这种情况下，我们将确保这些第三方也遵循与您的个人信息相关的隐私政策。\n
+    3.数据安全：我们采取合理的安全措施，以保护您的个人信息免受未经授权的访问、使用或泄露。\n
+    4.通知和变更：我们将通过合适的渠道通知您关于隐私政策和用户协议的任何变更，以确保您对我们如何处理个人信息的了解。\n
+    5.我们会收集您登录SoundWorld播客App对设备标识，设备名称和设备系统等信息，以为您提供保证SoundWorld播客App安全运行等功能。\n
+    6.我们处理您在SoundWorld播客中的个人数据，包括：在SoundWorld播客中购买的播客订阅，您的账户，例如拥有的SoundWorld产品以及订阅的SoundWorld服务。\n
+    7.您有权访问，修改，更正或删除我们可能收集的任何个人数据。"
+            android:textColor="@color/TextColor"
+            android:textSize="18sp" />
+    </ScrollView>
+
+</LinearLayout>
