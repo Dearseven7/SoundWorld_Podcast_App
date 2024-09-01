@@ -8,11 +8,11 @@
         android:id="@+id/login_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#64E269" />
+        android:background="@color/BarColor" />
 
     <fragment
         android:id="@+id/login_fragment"
-        android:name="com.example.refuseclassification.LoginFragment"
+        android:name="com.example.soundworld.LoginFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

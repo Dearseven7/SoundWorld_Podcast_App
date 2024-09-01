@@ -2,13 +2,17 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/home"
-        android:title="首页" />
+        android:title="home" />
     <item
         android:id="@+id/navigation_guide"
-        android:icon="@drawable/score_icon"
-        android:title="积分" />
+        android:icon="@drawable/search"
+        android:title="explore" />
     <item
-        android:id="@+id/navigation_setting"
+        android:id="@+id/navigation_subscribe"
+        android:icon="@drawable/favourite"
+        android:title="subscribe" />
+    <item
+        android:id="@+id/navigation_me"
         android:icon="@drawable/me"
-        android:title="我的" />
+        android:title="me" />
 </menu>

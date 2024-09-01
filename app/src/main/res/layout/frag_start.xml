@@ -5,13 +5,39 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/skip1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="172dp"
+        android:layout_marginLeft="172dp"
+        android:layout_marginTop="635dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="138dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="25dp" />
+
+    <Button
         android:id="@+id/skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/skip1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="跳过 (3s)"
-        android:textSize="25dp"
-        android:layout_margin="15dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="161dp"
+        android:layout_marginLeft="161dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginRight="162dp"
+        android:layout_marginBottom="339dp"
+        android:background="#000000"
+        android:shadowColor="#CDCDCD"
+        android:text="Skip"
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>

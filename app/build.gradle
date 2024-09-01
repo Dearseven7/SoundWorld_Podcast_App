@@ -2,15 +2,17 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "31.0.0"
+    buildToolsVersion '30.0.2'
     defaultConfig {
-        applicationId "com.example.refuseclassification"
+        applicationId "com.example.soundworld"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+
     }
     buildTypes {
         release {
@@ -18,6 +20,25 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    dataBinding.enabled = true
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    aaptOptions.cruncherEnabled = false;
+    aaptOptions.useNewCruncher = false;
+
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString(),
+                             "room.incremental": "true",
+                             "room.expandProjection": "true"]
+            }
+        }
+    }
+
 }
 
 dependencies {
@@ -32,8 +53,69 @@ dependencies {
     implementation 'org.litepal.guolindev:core:3.1.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    implementation 'com.android.volley:volley:1.2.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation project(path: ':core')
+    apply plugin: 'com.android.application'
+//    使用圆框上传图片
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+
+//    viewpager2
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
+    // Retrofit
+//    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+//    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+//    implementation 'com.squareup.retrofit2:converter-simplexml:2.4.0'
+
+//    Gson
+//    implementation 'com.google.code.gson:gson:2.8.5'
+
+//    Timber
+//    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+//Room
+//    def room_version = "2.2.0-beta01"
+//    implementation "androidx.room:room-runtime:$room_version"
+//    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+//    implementation 'androidx.room:room-runtime:2.2.2' //支持api
+//    annotationProcessor 'androidx.room:room-compiler:2.2.2' //支持注释
+
+    // OkHttp interceptor
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+
+    // ViewModel and LiveData
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    annotationProcessor 'androidx.lifecycle:lifecycle-common-java8:2.1.0'
+    // ExoPlayer
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.9.6'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.9.6'
+    // Glide Transformations
+    implementation 'jp.wasabeef:glide-transformations:4.1.0'
+    // Firebase Analytics
+//    implementation 'com.google.firebase:firebase-core:16.0.9'
+
+    // Multidex
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+//volley网络请求和图片加载
+    implementation('com.android.volley:volley-cronet:1.2.1')
+//    implementation('com.google.code.gson:gson"2.9.1')
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+
 }

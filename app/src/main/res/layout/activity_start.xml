@@ -3,12 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/home_up">
+    android:background="@drawable/welcome">
 
     <fragment
         android:id="@+id/start_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.example.refuseclassification.StartFragment" />
+        android:name="com.example.soundworld.StartFragment" />
 
 </LinearLayout>

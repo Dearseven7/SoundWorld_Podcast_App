@@ -3,4 +3,14 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="BarColor">#CBE3FF</color>
+    <color name="ThemeColor">#ECF3FB</color>
+    <color name="TitleColor">#2F3439</color>
+    <color name="SubtitleColor">#3E4650</color>
+
+
+
+    <color name="TextColor">#2583F1</color>
+    <color name="Darkred">#C3675A</color>
+
 </resources>
